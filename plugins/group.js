@@ -49,7 +49,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
     }
 })
 cmd({
-    pattern: "remove",
+    pattern: "kick",
     desc: "Remove a member from the group.",
     category: "group",
     react: "🚫",
