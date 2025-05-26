@@ -15,7 +15,7 @@ AUTO_VOICE: process.env.AUTO_VOICE || "true", // true or false
 AUTO_REPLY: process.env.AUTO_REPLY || "true", // true or false   
 AUTO_STICKER: process.env.AUTO_STICKER || "true", // truu or false    
 ALIVE_IMG: process.env.ALIVE_IMG || "https://i.ibb.co/tC37Q7B/20241220-122443.jpg",
-SESSION_ID: process.env.SESSION_ID || "tExDDRKC#seTT-C70c2JsiFp01sWCtF2qPQwkiOkP2Q2b8oiHKPU",
+SESSION_ID: process.env.SESSION_ID || "I2t0zCAR#nkwNaHoyfmd0k1nkNDpC5TTrAjF1le1XukPGQsex_jM",
 OWNER_NUMBER: process.env.SESSION_ID || "94783919841",
 PREFIX: process.env.PREFIX || ".",
 ANTI_DELETE: process.env.ANTI_DELETE || "true"
