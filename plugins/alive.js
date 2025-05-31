@@ -57,80 +57,70 @@ cmd(
 
       let thumbnail = "https://telegra.ph/file/f9e89a0a1779ee1199c29.jpg"; // default image
 
-      if (config.MODE === 'nonbutton') {
-        const sections = [
-          {
-            title: "",
-            rows: [
-              { title: "1", rowId: `${prefix}menu`, description: '`❲ 𝙼𝙴𝙽𝚄 𝙿𝙰𝙽𝙽𝙴𝙻 ❳` 🎧' },
-              { title: "2", rowId: `${prefix}ping`, description: '`❲ 𝙱𝙾𝚃 𝚂𝙿𝙴𝙴𝙳 ❳` 📄' },
-            ]
-          }
-        ];
-        const listMessage = {
-          caption: cap,
-          image: { url: thumbnail },
-          footer: '> 〽️ade By Dinuwh Bbh',
-          title: '',
-          buttonText: '> *`◎_Reply Below Number_◎`*',
-          sections
-        };
+      
 
-        return await conn.sendMessage(from, listMessage, { quoted: mek });
+//==3=3.03=3.033=3.0333=3.03333=3.033333=3.0333333=3.0333333=3.03333333=3.033333333=3.0333333333=3.03333333333=3.033333333334=3.033333333334=3.033333333334=3.033333333334=3=3.03=3.033=3.0333
 
-      } else if (config.MODE === 'button') {
-        const listData = {
-          title: "◎ BOT INFO ◎",
-          sections: [{
-            title: "DINUWH MD OPTIONS",
-            rows: [
-              {
-                title: "[Audio 🎧]",
-                description: "Download as audio\n〽️ade By Dinuwh Bbh",
-                id: `${prefix}ytaud https://youtube.com/shorts/example`
-              },
-              {
-                title: "[Document 📁]",
-                description: "Download as document\n〽️ade By Dinuwh Bbh",
-                id: `${prefix}ytdoc https://youtube.com/shorts/example`
-              }
-            ]
-          }]
-        };
 
-        return await conn.sendMessage(from, {
-          image: { url: thumbnail },
-          caption: cap,
-          footer: "> 〽️ade By Dinuwh Bbh",
-          buttons: [
-            {
-              buttonId: `${prefix}ping`,
-              buttonText: { displayText: "`[BOT PING]`" },
-              type: 1
-            },
-            {
-              buttonId: `${prefix}menu`,
-              buttonText: { displayText: "`[MENU PANNEL]`" },
-              type: 1
-            },
-            {
-              buttonId: "action",
-              buttonText: { displayText: "🔘 Choose Song Type" },
-              type: 4,
-              nativeFlowInfo: {
-                name: "single_select",
-                paramsJson: JSON.stringify(listData),
-              },
-            },
-          ],
-          headerType: 1,
-          viewOnce: true,
-        }, { quoted: mek });
-      }
 
-    } catch (e) {
-      console.error(e);
-      reply(`❌ Error: ${e.message}`);
-    }
-  }
-);
+
+if (config.MODE === 'nonbutton') {
+  const sections = [
+    {
+	title: "",
+	rows: [
+	    {title: "1", rowId: prefix + 'menu' , description: 'COMMANDS MENU'},
+	    {title: "2", rowId: prefix + 'ping' , description: 'VAJIRA-MD SPEED'} ,
+
+	]
+    } 
+]
+const listMessage = {
+caption: cap,
+image : { url: config.LOGO },	
+footer: config.FOOTER,
+title: '',
+buttonText: '*🔢 Reply below number*',
+sections
+}
+	
+return await conn.replyList(from, listMessage ,{ quoted : mek })
+
+} if (config.MODE === 'button') {
+
+
+                  
+        conn.sendMessage(from, {
+            image: { url: config.LOGO },
+    caption: cap,
+    footer: config.FOOTER,
+                buttons: [
+			{
+                    buttonId: `${prefix}menu`,
+                    buttonText: {
+                        displayText: 'MENU'
+                    },
+                },
+		{
+                    buttonId: `${prefix}ping`,
+                    buttonText: {
+                        displayText: 'PING'
+                    },
+                },	
+            ],
+            headerType: 1,
+            viewOnce: true
+        }, {
+            quoted: m
+        });
+        
+
+}
+
+
+	
+} catch (e) {
+  reply('*ERROR !!*')
+  l(e)
+}
+})
