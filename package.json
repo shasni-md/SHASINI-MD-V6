@@ -9,7 +9,7 @@
     "restart": "pm2 restart PCY-MD"
   },
   "dependencies": {
-    "@whiskeysockets/baileys": "latest",
+    "@whiskeysockets/baileys": "github:MR-LAKIYA/Baileys",
     "@adiwajshing/keyed-db": "latest",
     "pino": "^7.0.5",
     "pm2": "^6.0.5",
