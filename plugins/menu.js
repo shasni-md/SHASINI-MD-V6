@@ -53,7 +53,7 @@ _*🔮 Reply with the Number to select a below*_
 
         // Send the menu with an image
         const menuMessage = await conn.sendMessage(from, { 
-            image: { url: "https://i.ibb.co/q344gmyh/DiNuWhMd.jpg" }, 
+            image: { url: "https://i.ibb.co/21tR8Nr6/3610.jpg" }, 
             caption: desc 
         }, { quoted: mek });
 
