@@ -17,6 +17,7 @@ AUTO_STICKER: process.env.AUTO_STICKER || "true", // truu or false
 ALIVE_IMG: process.env.ALIVE_IMG || "https://i.ibb.co/tC37Q7B/20241220-122443.jpg",
 SESSION_ID: process.env.SESSION_ID || "I2cCAT4L#R_aw1ZfoQFgBXlANAShIq6ZFmJPTCfana7N8yAlUfv8",
 OWNER_NUMBER: process.env.SESSION_ID || "94783919841",
+MODE: process.env.MODE || "button",    
 PREFIX: process.env.PREFIX || ".",
 ANTI_DELETE: process.env.ANTI_DELETE || "true"
 };
