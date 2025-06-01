@@ -1,6 +1,6 @@
 const fetch = require("node-fetch");
 const { getBuffer, getGroupAdmins, getRandom, h2k, isUrl, Json, runtime, sleep, fetchJson } = require('../lib/functions')
-const { cmd, commands } = require("../lib/command");
+const { cmd, commands } = require("../lib/config");
 const yts = require("yt-search");
 const config = require("../config");
 // Get prefix dynamically from settings or fallback
